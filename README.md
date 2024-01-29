@@ -1,4 +1,5 @@
 # Processing Patient Data - UiPath Task Capture Project
+![Processing Patient Data Diagram](ProcessingPatientDatadiagram.jpg)
 
 ## Overview
 
