@@ -1,0 +1,717 @@
+<?xml version="1.0"?>
+<Activity xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" mva:VisualBasic.Settings="{x:Null}" x:Class="Flowchart" mc:Ignorable="sap sap2010 sads">
+<TextExpression.NamespacesForImplementation>
+  <sco:Collection x:TypeArguments="x:String">
+    <x:String>System.Activities</x:String>
+    <x:String>System.Activities.Statements</x:String>
+    <x:String>System.Activities.Expressions</x:String>
+    <x:String>System.Activities.Validation</x:String>
+    <x:String>System.Activities.XamlIntegration</x:String>
+    <x:String>Microsoft.VisualBasic</x:String>
+    <x:String>Microsoft.VisualBasic.Activities</x:String>
+    <x:String>System</x:String>
+    <x:String>System.Collections</x:String>
+    <x:String>System.Collections.Generic</x:String>
+    <x:String>System.Data</x:String>
+    <x:String>System.Diagnostics</x:String>
+    <x:String>System.Drawing</x:String>
+    <x:String>System.IO</x:String>
+    <x:String>System.Linq</x:String>
+    <x:String>System.Net.Mail</x:String>
+    <x:String>System.Xml</x:String>
+    <x:String>System.Xml.Linq</x:String>
+    <x:String>System.Windows.Markup</x:String>
+    <x:String>UiPath.Core</x:String>
+    <x:String>UiPath.Core.Activities</x:String>
+  </sco:Collection>
+</TextExpression.NamespacesForImplementation>
+<TextExpression.ReferencesForImplementation>
+  <sco:Collection x:TypeArguments="AssemblyReference">
+    <AssemblyReference>System.Activities</AssemblyReference>
+    <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+    <AssemblyReference>mscorlib</AssemblyReference>
+    <AssemblyReference>System.Data</AssemblyReference>
+    <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+    <AssemblyReference>System</AssemblyReference>
+    <AssemblyReference>System.Drawing</AssemblyReference>
+    <AssemblyReference>System.Core</AssemblyReference>
+    <AssemblyReference>System.Xml</AssemblyReference>
+    <AssemblyReference>System.Xml.Linq</AssemblyReference>
+    <AssemblyReference>PresentationFramework</AssemblyReference>
+    <AssemblyReference>WindowsBase</AssemblyReference>
+    <AssemblyReference>PresentationCore</AssemblyReference>
+    <AssemblyReference>System.Xaml</AssemblyReference>
+    <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+    <AssemblyReference>System.ServiceModel</AssemblyReference>
+    <AssemblyReference>System.ValueTuple</AssemblyReference>
+    <AssemblyReference>UiPath.Excel</AssemblyReference>
+    <AssemblyReference>UiPath.Mail</AssemblyReference>
+    <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+  </sco:Collection>
+</TextExpression.ReferencesForImplementation>
+<Flowchart DisplayName="Flowchart_Processing_Patient_Data" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+      <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+      <av:Size x:Key="ShapeSize">60,75</av:Size>
+      <x:Double x:Key="Width">0</x:Double>
+      <x:Double x:Key="Height">0</x:Double>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_0">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">1117,1412</av:Point>
+          <av:Size x:Key="ShapeSize">202,58</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Download and Open&#xA;SubscriptionsExtended.xlsx">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData"/>
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Download and Open&#xA;SubscriptionsExtended.xlsx" sap2010:WorkflowViewState.IdRef="Sequence_0">
+              <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Click on the searchbar&#xA;&#xA;">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='New tab - Personal - Microsoft​ Edge'/>&lt;uia automationid='view_1000' cls='ToolbarView' name='App bar'/>&lt;uia cls='LocationBarView'/>&lt;uia automationid='view_1022' cls='OmniboxViewViews' name='Address and search bar'/>" FuzzySelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='New tab - Personal - Microsoft​ Edge'/>&lt;uia automationid='view_1000' cls='ToolbarView' name='App bar'/>&lt;uia cls='LocationBarView'/>&lt;uia automationid='view_1022' cls='OmniboxViewViews' name='Address and search bar'/>" InformativeScreenshot="de4eb18506fe4640a169251f6838e11c.png" SearchSteps="Selector, FuzzySelector"/>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Onsert the link to:https://acme-test.uipath.com/reboot-your-skills">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='New tab - Personal - Microsoft​ Edge'/>&lt;uia cls='View'/>" FuzzySelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='New tab - Personal - Microsoft​ Edge'/>&lt;uia cls='View'/>" InformativeScreenshot="5de04e466d30454d8a7e745435945f56.png" SearchSteps="Selector, FuzzySelector"/>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Click to download the appointment file">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='8LJS7ahB_1IjCby4_eHcktG85b9GJhykE-SubscriptionsExtended.xlsx and*'/>&lt;uia automationid='view_1063' cls='InfoBarContainerView' name='Infobar Container'/>&lt;uia cls='MdTextButton' name='Download file'/>" FuzzySelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='8LJS7ahB_1IjCby4_eHcktG85b9GJhykE-SubscriptionsExtended.xlsx and*'/>&lt;uia automationid='view_1063' cls='InfoBarContainerView' name='Infobar Container'/>&lt;uia cls='MdTextButton' name='Download file'/>" InformativeScreenshot="b128d4da5dd94a6ca99c565d761faf90.png" SearchSteps="Selector, FuzzySelector"/>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Click on save to save locally">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' idx='*'/>&lt;uia name='Downloads' role='document'/>" FuzzySelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' idx='*'/>&lt;uia name='Downloads' role='document'/>" InformativeScreenshot="6997e65486cc4904a138901b08b03618.png" SearchSteps="Selector, FuzzySelector"/>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Give the file a simple name">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save As'/>" FuzzySelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save As'/>" InformativeScreenshot="776ac0125ccc4ef58e6884017c4d8555.png" SearchSteps="Selector, FuzzySelector"/>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Download and Open&#xA;SubscriptionsExtended.xlsx">
+                <uix:NApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData"/>
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Download and Open&#xA;SubscriptionsExtended.xlsx" sap2010:WorkflowViewState.IdRef="Sequence_0_1">
+                      <uix:NClick ClickType="Double" DisplayName="Double Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Double click to open the excel file.">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Double Click" FullSelectorArgument="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='Practice 2'/>&lt;uia cls='UIItemsView' name='Items View'/>&lt;uia automationid='System.ItemNameDisplay' cls='UIProperty' name='Name' tableCol='0' tableRow='0'/>" FuzzySelectorArgument="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='Practice 2'/>&lt;uia cls='UIItemsView' name='Items View'/>&lt;uia automationid='System.ItemNameDisplay' cls='UIProperty' name='Name' tableCol='0' tableRow='0'/>" InformativeScreenshot="ea0198ed8a9444caaffaa3e99b897029.png" SearchSteps="Selector, FuzzySelector"/>
+                        </uix:NClick.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NClick>
+                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Download and Open&#xA;SubscriptionsExtended.xlsx">
+                        <uix:NApplicationCard.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData"/>
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Download and Open&#xA;SubscriptionsExtended.xlsx" sap2010:WorkflowViewState.IdRef="Sequence_0_2">
+                              <uix:NClick ClickType="Double" DisplayName="Double Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="The open excel file.">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Double Click" FullSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx  [Protected View] - Excel'/>&lt;uia cls='MsoCommandBar'/>&lt;uia cls='NetUIOfficeCaption' name='‪SubscriptionsExtended.xlsx  [Protected View]‬  -  Excel'/>" FuzzySelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx  [Protected View] - Excel'/>&lt;uia cls='MsoCommandBar'/>&lt;uia cls='NetUIOfficeCaption' name='‪SubscriptionsExtended.xlsx  [Protected View]‬  -  Excel'/>" InformativeScreenshot="2bb3d6c0232d497db096e52045bb1801.png" SearchSteps="Selector, FuzzySelector"/>
+                                </uix:NClick.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NClick>
+                            </Sequence>
+                          </ActivityAction>
+                        </uix:NApplicationCard.Body>
+                        <uix:NApplicationCard.TargetApp>
+                          <uix:TargetApp FilePath="C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx  [Protected View] - Excel'/>"/>
+                        </uix:NApplicationCard.TargetApp>
+                      </uix:NApplicationCard>
+                    </Sequence>
+                  </ActivityAction>
+                </uix:NApplicationCard.Body>
+                <uix:NApplicationCard.TargetApp>
+                  <uix:TargetApp FilePath="C:\Windows\explorer.exe" Selector="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='Practice 2'/>"/>
+                </uix:NApplicationCard.TargetApp>
+              </uix:NApplicationCard>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp FilePath="C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='New tab - Personal - Microsoft​ Edge'/>"/>
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+      <FlowStep.Next>
+        <FlowSwitch sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1" DisplayName="Docs is&#xA;Open?" x:Name="__ReferenceID11" x:TypeArguments="x:String">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">816,1412</av:Point>
+              <av:Size x:Key="ShapeSize">70,87</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_1" x:Key="Yes">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:Point x:Key="ShapeLocation">883,1232</av:Point>
+                <av:Size x:Key="ShapeSize">192,48</av:Size>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Get Patient ID">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData"/>
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Get Patient ID" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                    <uix:NClick ClickType="Double" DisplayName="Double Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Select the PatientID cell">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Double Click" FullSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia cls='EXCEL6'/>" FuzzySelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia cls='EXCEL6'/>" InformativeScreenshot="21930957ce2b4be7892634986de9e04f.png" SearchSteps="Selector, FuzzySelector"/>
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                    <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Right" sap2010:Annotation.AnnotationText="Right Click on the cell data&#xA;&#xA;">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia cls='EXCEL6'/>" FuzzySelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia cls='EXCEL6'/>" InformativeScreenshot="61674a95b63d48f0a2df4864aeeca54e.png" SearchSteps="Selector, FuzzySelector"/>
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                    <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Select copy option from context menu">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia cls='NetUITWMenuItemGroup' name=' '/>&lt;uia cls='NetUITWBtnMenuItem' name='Copy'/>" FuzzySelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia cls='NetUITWMenuItemGroup' name=' '/>&lt;uia cls='NetUITWBtnMenuItem' name='Copy'/>" InformativeScreenshot="ab0ab6edcc6b41d5957b7fccbbe930d4.png" SearchSteps="Selector, FuzzySelector"/>
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp FilePath="C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>"/>
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+            <FlowStep.Next>
+              <FlowStep x:Name="__ReferenceID5" sap2010:WorkflowViewState.IdRef="FlowStep_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">883,1126</av:Point>
+                    <av:Size x:Key="ShapeSize">192,48</av:Size>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Navigate To System 2">
+                  <uix:NApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData"/>
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Navigate To System 2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                        <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Click search bar and pate CTRL-V&#xA;:https://acme-test.uipath.com/reboot-your-skills ">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Google - Personal - Microsoft​ Edge'/>&lt;uia cls='View'/>" FuzzySelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Google - Personal - Microsoft​ Edge'/>&lt;uia cls='View'/>" InformativeScreenshot="58bb003b2c4a4dab9ff2ac2c431c45eb.png" SearchSteps="Selector, FuzzySelector"/>
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                        <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Click or Hover on 'Health Care' button">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard'/>&lt;webctrl aaname='                      Health Care' parentid='dashmenu' tag='BUTTON'/>" FuzzySelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard'/>&lt;webctrl aaname='                      Health Care' parentid='dashmenu' tag='BUTTON'/>" InformativeScreenshot="7a871ff4731048c8be26e61f8a56a5bb.png" SearchSteps="Selector, FuzzySelector"/>
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                        <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Click 'Download Daily Appointment'">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard'/>&lt;webctrl aaname='Download Daily Appointment' parentid='dashmenu' tag='A'/>" FuzzySelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard'/>&lt;webctrl aaname='Download Daily Appointment' parentid='dashmenu' tag='A'/>" InformativeScreenshot="a615a07bc7f94e989683aad10b049ccf.png" SearchSteps="Selector, FuzzySelector"/>
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                        <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Click on the Day dropdown">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Medical'/>&lt;webctrl tag='SELECT'/>" FuzzySelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Medical'/>&lt;webctrl tag='SELECT'/>" InformativeScreenshot="fa0a171c6f624d1d8fff3966327a7b7f.png" SearchSteps="Selector, FuzzySelector"/>
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                        <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Click on 'Today'">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Medical - Personal - Microsoft​ Edge'/>&lt;uia name='ACME System 1 - Medical' role='document'/>" FuzzySelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Medical - Personal - Microsoft​ Edge'/>&lt;uia name='ACME System 1 - Medical' role='document'/>" InformativeScreenshot="1287bad00580476aaeeb25ce9ae58035.png" SearchSteps="Selector, FuzzySelector"/>
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                      </Sequence>
+                    </ActivityAction>
+                  </uix:NApplicationCard.Body>
+                  <uix:NApplicationCard.TargetApp>
+                    <uix:TargetApp FilePath="C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Google - Personal - Microsoft​ Edge'/>"/>
+                  </uix:NApplicationCard.TargetApp>
+                </uix:NApplicationCard>
+                <FlowStep.Next>
+                  <FlowStep x:Name="__ReferenceID6" sap2010:WorkflowViewState.IdRef="FlowStep_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">883,1016</av:Point>
+                        <av:Size x:Key="ShapeSize">192,48</av:Size>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Search Patient by ID">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData"/>
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Search Patient by ID" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                            <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Press 'CTRL+F' to open">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;wnd aaname='Find on page for     ACME System 1 - Medical' app='msedge.exe' cls='Chrome_WidgetWin_1'/>&lt;uia automationid='view_1049' cls='Textfield' name='Find on page'/>" FuzzySelectorArgument="&lt;wnd aaname='Find on page for     ACME System 1 - Medical' app='msedge.exe' cls='Chrome_WidgetWin_1'/>&lt;uia automationid='view_1049' cls='Textfield' name='Find on page'/>" InformativeScreenshot="7f44de7624694a62a94e619f2a7a496b.png" SearchSteps="Selector, FuzzySelector"/>
+                              </uix:NClick.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NClick>
+                            <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Press 'CTRL V' ">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;wnd aaname='Find on page for     ACME System 1 - Medical' app='msedge.exe' cls='Chrome_WidgetWin_1'/>&lt;uia automationid='view_1049' cls='Textfield' name='Find on page'/>" FuzzySelectorArgument="&lt;wnd aaname='Find on page for     ACME System 1 - Medical' app='msedge.exe' cls='Chrome_WidgetWin_1'/>&lt;uia automationid='view_1049' cls='Textfield' name='Find on page'/>" InformativeScreenshot="604ba74f82404934bb9b4a478da67454.png" SearchSteps="Selector, FuzzySelector"/>
+                              </uix:NClick.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NClick>
+                            <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Press 'Enter'">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Medical'/>&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' idx='2'/>" FuzzySelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Medical'/>&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' idx='2'/>" InformativeScreenshot="381811dc2fa141a5a17951f7c5ae1fff.png" SearchSteps="Selector, FuzzySelector"/>
+                              </uix:NClick.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NClick>
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp FilePath="C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" Selector="&lt;wnd aaname='Find on page for     ACME System 1 - Medical' app='msedge.exe' cls='Chrome_WidgetWin_1'/>"/>
+                      </uix:NApplicationCard.TargetApp>
+                    </uix:NApplicationCard>
+                    <FlowStep.Next>
+                      <FlowSwitch sap2010:WorkflowViewState.IdRef="FlowSwitch`1_2" DisplayName="User&#xA;Found?" x:Name="__ReferenceID12" x:TypeArguments="x:String">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">816,916</av:Point>
+                            <av:Size x:Key="ShapeSize">70,87</av:Size>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <FlowSwitch sap2010:WorkflowViewState.IdRef="FlowSwitch`1_3" DisplayName="Is this&#xA;the last&#xA;page?" x:Name="__ReferenceID13" x:TypeArguments="x:String" x:Key="No">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">498,916</av:Point>
+                              <av:Size x:Key="ShapeSize">70,87</av:Size>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_4" x:Key="No">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">498,1016</av:Point>
+                                <av:Size x:Key="ShapeSize">192,48</av:Size>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Go to the next Page">
+                              <uix:NApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData"/>
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Go to the next Page" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                    <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Click on the 'Right Arrow'">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Medical'/>&lt;webctrl aaname='&amp;gt;' tag='A'/>" FuzzySelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Medical'/>&lt;webctrl aaname='&amp;gt;' tag='A'/>" InformativeScreenshot="e2361bf6ce8d4633b3f94c18b244d7a1.png" SearchSteps="Selector, FuzzySelector"/>
+                                      </uix:NClick.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NClick>
+                                  </Sequence>
+                                </ActivityAction>
+                              </uix:NApplicationCard.Body>
+                              <uix:NApplicationCard.TargetApp>
+                                <uix:TargetApp FilePath="C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Medical'/>" Url="https://acme-test.uipath.com/medical/appointment" BrowserType="Edge"/>
+                              </uix:NApplicationCard.TargetApp>
+                            </uix:NApplicationCard>
+                            <FlowStep.Next>
+                              <x:Reference>__ReferenceID6</x:Reference>
+                            </FlowStep.Next>
+                          </FlowStep>
+                          <FlowStep x:Name="__ReferenceID9" sap2010:WorkflowViewState.IdRef="FlowStep_5" x:Key="Yes">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">479,474</av:Point>
+                                <av:Size x:Key="ShapeSize">192,48</av:Size>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Set Priority Number 3">
+                              <uix:NApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData"/>
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Set Priority Number 3" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                    <uix:NClick ClickType="Double" DisplayName="Double Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Click on the on the cell that you want to insert data in.">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Double Click" FullSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='Grid'/>&lt;uia automationid='K3' cls='XLSpreadsheetCell' name='K3' tableCol='11' tableRow='3'/>" FuzzySelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='Grid'/>&lt;uia automationid='K3' cls='XLSpreadsheetCell' name='K3' tableCol='11' tableRow='3'/>" InformativeScreenshot="2e2449a305884fd3ae016b3c35ed4223.png" SearchSteps="Selector, FuzzySelector"/>
+                                      </uix:NClick.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NClick>
+                                    <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia cls='EXCEL6'/>" FuzzySelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia cls='EXCEL6'/>" InformativeScreenshot="7781ca7b011d4fb2940260d5f85ba6f7.png" SearchSteps="Selector, FuzzySelector"/>
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                  </Sequence>
+                                </ActivityAction>
+                              </uix:NApplicationCard.Body>
+                              <uix:NApplicationCard.TargetApp>
+                                <uix:TargetApp FilePath="C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>"/>
+                              </uix:NApplicationCard.TargetApp>
+                            </uix:NApplicationCard>
+                            <FlowStep.Next>
+                              <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_6">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">663,234</av:Point>
+                                    <av:Size x:Key="ShapeSize">202,58</av:Size>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Save &#xA;SubscriptionsExtended.xslx">
+                                  <uix:NApplicationCard.Body>
+                                    <ActivityAction x:TypeArguments="x:Object">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData"/>
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Save &#xA;SubscriptionsExtended.xslx" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                        <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Click on save at the top left Corner">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia cls='MsoCommandBar'/>&lt;uia cls='NetUIElement' name='Quick Access Toolbar'/>&lt;uia automationid='FileSave' cls='NetUIRibbonButton' name='Save'/>" FuzzySelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia cls='MsoCommandBar'/>&lt;uia cls='NetUIElement' name='Quick Access Toolbar'/>&lt;uia automationid='FileSave' cls='NetUIRibbonButton' name='Save'/>" InformativeScreenshot="d77fae69023f41caa33143aa788b5a8a.png" SearchSteps="Selector, FuzzySelector"/>
+                                          </uix:NClick.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </uix:NClick>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </uix:NApplicationCard.Body>
+                                  <uix:NApplicationCard.TargetApp>
+                                    <uix:TargetApp FilePath="C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>"/>
+                                  </uix:NApplicationCard.TargetApp>
+                                </uix:NApplicationCard>
+                                <FlowStep.Next>
+                                  <FlowStep x:Name="__ReferenceID17" sap2010:WorkflowViewState.IdRef="FlowStep_7">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:Point x:Key="ShapeLocation">582,136</av:Point>
+                                        <av:Size x:Key="ShapeSize">40,40</av:Size>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:Comment DisplayName="Event" sap2010:WorkflowViewState.IdRef="Comment`1_1" Text="Stop">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">582,136</av:Point>
+                                          <av:Size x:Key="ShapeSize">70,87</av:Size>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:Comment>
+                                    <FlowStep.Next/>
+                                  </FlowStep>
+                                </FlowStep.Next>
+                              </FlowStep>
+                            </FlowStep.Next>
+                          </FlowStep>
+                        </FlowSwitch>
+                        <FlowStep x:Name="__ReferenceID10" sap2010:WorkflowViewState.IdRef="FlowStep_8" x:Key="Yes">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">888,663</av:Point>
+                              <av:Size x:Key="ShapeSize">202,58</av:Size>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Donwload,Open Check Care&#xA;Type">
+                            <uix:NApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData"/>
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Donwload,Open Check Care&#xA;Type" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                  <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Click on the file link">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Medical'/>&lt;webctrl tag='TABLE'/>&lt;webctrl tableRow='5' tag='A'/>" FuzzySelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Medical'/>&lt;webctrl tag='TABLE'/>&lt;webctrl tableRow='5' tag='A'/>" InformativeScreenshot="4ca633cdb0d941e98a7055665fc5b671.png" SearchSteps="Selector, FuzzySelector"/>
+                                    </uix:NClick.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NClick>
+                                  <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Highlight the care type">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;html app='msedge.exe' title='56062-008_appointment.xlsx'/>&lt;webctrl id='wacframe' tag='IFRAME'/>&lt;webctrl parentid='Sheet0_0_0_1' tag='CANVAS'/>" FuzzySelectorArgument="&lt;html app='msedge.exe' title='56062-008_appointment.xlsx'/>&lt;webctrl id='wacframe' tag='IFRAME'/>&lt;webctrl parentid='Sheet0_0_0_1' tag='CANVAS'/>" InformativeScreenshot="e237892adfa943078090eef839a850a0.png" SearchSteps="Selector, FuzzySelector"/>
+                                    </uix:NClick.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NClick>
+                                </Sequence>
+                              </ActivityAction>
+                            </uix:NApplicationCard.Body>
+                            <uix:NApplicationCard.TargetApp>
+                              <uix:TargetApp FilePath="C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Medical'/>" Url="https://acme-test.uipath.com/medical/appointment" BrowserType="Edge"/>
+                            </uix:NApplicationCard.TargetApp>
+                          </uix:NApplicationCard>
+                          <FlowStep.Next>
+                            <FlowSwitch sap2010:WorkflowViewState.IdRef="FlowSwitch`1_4" DisplayName="Care&#xA;Type?" x:Name="__ReferenceID14" x:TypeArguments="x:String">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">820,402</av:Point>
+                                  <av:Size x:Key="ShapeSize">70,87</av:Size>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <FlowSwitch sap2010:WorkflowViewState.IdRef="FlowSwitch`1_5" DisplayName="Is this&#xA;the last&#xA;patient?" x:Name="__ReferenceID15" x:TypeArguments="x:String" x:Key="value">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">820,234</av:Point>
+                                    <av:Size x:Key="ShapeSize">70,87</av:Size>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_9" x:Key="No">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <av:Point x:Key="ShapeLocation">1323,228</av:Point>
+                                      <av:Size x:Key="ShapeSize">202,46</av:Size>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Go to Next Patient in the list">
+                                    <uix:NApplicationCard.Body>
+                                      <ActivityAction x:TypeArguments="x:Object">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData"/>
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Go to Next Patient in the list" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                          <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Select the next user Patent on the list">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='Grid'/>&lt;uia automationid='A3' cls='XLSpreadsheetCell' name='A3' tableCol='1' tableRow='3'/>" FuzzySelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='Grid'/>&lt;uia automationid='A3' cls='XLSpreadsheetCell' name='A3' tableCol='1' tableRow='3'/>" InformativeScreenshot="9441b14f9b6c40ff8893344e5739c445.png" SearchSteps="Selector, FuzzySelector"/>
+                                            </uix:NClick.Target>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NClick>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </uix:NApplicationCard.Body>
+                                    <uix:NApplicationCard.TargetApp>
+                                      <uix:TargetApp FilePath="C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>"/>
+                                    </uix:NApplicationCard.TargetApp>
+                                  </uix:NApplicationCard>
+                                  <FlowStep.Next>
+                                    <x:Reference>__ReferenceID1</x:Reference>
+                                  </FlowStep.Next>
+                                </FlowStep>
+                                <x:Reference x:Key="Yes">__ReferenceID3</x:Reference>
+                              </FlowSwitch>
+                              <FlowStep x:Name="__ReferenceID7" sap2010:WorkflowViewState.IdRef="FlowStep_10" x:Key="Emegency">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">1080,474</av:Point>
+                                    <av:Size x:Key="ShapeSize">192,48</av:Size>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Set Priority 1">
+                                  <uix:NApplicationCard.Body>
+                                    <ActivityAction x:TypeArguments="x:Object">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData"/>
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Set Priority 1" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                        <uix:NClick ClickType="Double" DisplayName="Double Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Click on the on the cell that you want to insert data in.">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Double Click" FullSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='Grid'/>&lt;uia automationid='K5' cls='XLSpreadsheetCell' name='K5' tableCol='11' tableRow='5'/>" FuzzySelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='Grid'/>&lt;uia automationid='K5' cls='XLSpreadsheetCell' name='K5' tableCol='11' tableRow='5'/>" InformativeScreenshot="4841f9ffe3a5403389f54f1634808a91.png" SearchSteps="Selector, FuzzySelector"/>
+                                          </uix:NClick.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </uix:NClick>
+                                        <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="type in 1">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia cls='EXCEL6'/>" FuzzySelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia cls='EXCEL6'/>" InformativeScreenshot="2dac7b0b6585482bbccfc28dce3d95b0.png" SearchSteps="Selector, FuzzySelector"/>
+                                          </uix:NClick.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </uix:NClick>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </uix:NApplicationCard.Body>
+                                  <uix:NApplicationCard.TargetApp>
+                                    <uix:TargetApp FilePath="C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>"/>
+                                  </uix:NApplicationCard.TargetApp>
+                                </uix:NApplicationCard>
+                              </FlowStep>
+                              <FlowStep x:Name="__ReferenceID8" sap2010:WorkflowViewState.IdRef="FlowStep_11" x:Key="Any Other">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">715,474</av:Point>
+                                    <av:Size x:Key="ShapeSize">192,48</av:Size>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Set Priority 2">
+                                  <uix:NApplicationCard.Body>
+                                    <ActivityAction x:TypeArguments="x:Object">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData"/>
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Set Priority 2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                        <uix:NClick ClickType="Double" DisplayName="Double Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Click on the on the cell that you want to insert data in.">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Double Click" FullSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='Grid'/>&lt;uia automationid='K2' cls='XLSpreadsheetCell' name='K2' tableCol='11' tableRow='2'/>" FuzzySelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='Grid'/>&lt;uia automationid='K2' cls='XLSpreadsheetCell' name='K2' tableCol='11' tableRow='2'/>" InformativeScreenshot="3939fc3387934442bbbaadc2475f70eb.png" SearchSteps="Selector, FuzzySelector"/>
+                                          </uix:NClick.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </uix:NClick>
+                                        <uix:NClick ClickType="Single" DisplayName="Click" KeyModifiers="None" MouseButton="Left" sap2010:Annotation.AnnotationText="Type in 2&#xA;&#xA;">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable ElementType="InputBox" FriendlyName="Click" FullSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia cls='EXCEL6'/>" FuzzySelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>&lt;uia cls='EXCEL6'/>" InformativeScreenshot="09cc4268bf6e40eeaca082fae8257f25.png" SearchSteps="Selector, FuzzySelector"/>
+                                          </uix:NClick.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </uix:NClick>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </uix:NApplicationCard.Body>
+                                  <uix:NApplicationCard.TargetApp>
+                                    <uix:TargetApp FilePath="C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='SubscriptionsExtended.xlsx - Excel'/>"/>
+                                  </uix:NApplicationCard.TargetApp>
+                                </uix:NApplicationCard>
+                              </FlowStep>
+                            </FlowSwitch>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowSwitch>
+                    </FlowStep.Next>
+                  </FlowStep>
+                </FlowStep.Next>
+              </FlowStep>
+            </FlowStep.Next>
+          </FlowStep>
+          <x:Reference x:Key="No">__ReferenceID4</x:Reference>
+        </FlowSwitch>
+      </FlowStep.Next>
+    </FlowStep>
+  </Flowchart.StartNode>
+  <x:Reference>__ReferenceID4</x:Reference>
+  <x:Reference>__ReferenceID11</x:Reference>
+  <x:Reference>__ReferenceID1</x:Reference>
+  <x:Reference>__ReferenceID5</x:Reference>
+  <x:Reference>__ReferenceID6</x:Reference>
+  <x:Reference>__ReferenceID12</x:Reference>
+  <x:Reference>__ReferenceID13</x:Reference>
+  <x:Reference>__ReferenceID2</x:Reference>
+  <x:Reference>__ReferenceID9</x:Reference>
+  <x:Reference>__ReferenceID3</x:Reference>
+  <x:Reference>__ReferenceID17</x:Reference>
+  <x:Reference>__ReferenceID10</x:Reference>
+  <x:Reference>__ReferenceID14</x:Reference>
+  <x:Reference>__ReferenceID15</x:Reference>
+  <x:Reference>__ReferenceID0</x:Reference>
+  <x:Reference>__ReferenceID7</x:Reference>
+  <x:Reference>__ReferenceID8</x:Reference>
+</Flowchart>
+</Activity>
